@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,23 +105,26 @@
     </div>
 
     <!-- WHO WE ARE -->
-    <section class="about section" id="quienes" data-section>
-      <div class="container">
-        <p class="label reveal">01 — Quiénes somos</p>
-        <h2 class="manifesto reveal">Nadie aplaude un transfer puntual. <em>Por eso existimos.</em></h2>
-        <p class="about__line reveal">Somos el equipo que trabaja donde no llegan los focos: del primer rider al último cierre de puertas.</p>
+    <section class="about" id="quienes" data-section>
+      <div class="about__stage">
+        <figure class="about__bg parallax" data-speed="0.14"><img src="assets/img/estadio-montaje.jpg" alt="Estadio con el escenario montado y sillas en el césped, horas antes del concierto" loading="lazy"><figcaption>Estadio, horas antes de abrir puertas</figcaption></figure>
+        <div class="container about__inner">
+          <p class="label label--light reveal">01 — Quiénes somos</p>
+          <h2 class="manifesto reveal">Nadie aplaude un transfer puntual. <em>Por eso existimos.</em></h2>
+          <p class="about__line reveal">Somos el equipo que trabaja donde no llegan los focos: del primer rider al último cierre de puertas.</p>
 
-        <dl class="stats">
-          <div class="stat reveal"><dt>Artistas atendidos</dt><dd>20<span>+</span></dd></div>
-          <div class="stat reveal"><dt>Venues</dt><dd>6</dd></div>
-          <div class="stat reveal"><dt>Ciudades de gira</dt><dd>9</dd></div>
-          <div class="stat reveal"><dt>Continentes</dt><dd>2</dd></div>
-        </dl>
+          <dl class="stats">
+            <div class="stat reveal"><dt>Artistas atendidos</dt><dd>20<span>+</span></dd></div>
+            <div class="stat reveal"><dt>Venues</dt><dd>6</dd></div>
+            <div class="stat reveal"><dt>Ciudades de gira</dt><dd>9</dd></div>
+            <div class="stat reveal"><dt>Continentes</dt><dd>2</dd></div>
+          </dl>
+        </div>
       </div>
 
       <div class="about__strip">
         <figure class="parallax" data-speed="0.12"><img src="assets/img/camerino.jpg" alt="Camerino preparado con sofás, catering y burro de vestuario" loading="lazy"><figcaption>Camerino, antes de la llegada</figcaption></figure>
-        <figure class="parallax" data-speed="-0.08"><img src="assets/img/estadio-campo.jpg" alt="Miembro del equipo caminando por el césped hacia el escenario de un estadio en montaje" loading="lazy"><figcaption>Día de montaje</figcaption></figure>
+        <figure class="parallax" data-speed="-0.08"><img src="assets/img/equipo-walkie.jpg" alt="Dos miembros del equipo con walkie en un espacio de marca" loading="lazy"><figcaption>Equipo en operación</figcaption></figure>
         <figure class="parallax" data-speed="0.18"><img src="assets/img/equipo-pase.jpg" alt="Miembro del equipo con acreditación junto a la valla del público" loading="lazy"><figcaption>Show day</figcaption></figure>
       </div>
     </section>
@@ -168,7 +171,7 @@
 
           <article class="pass reveal">
             <header class="pass__top"><span>AAA</span><span>03</span></header>
-            <figure class="pass__img"><img src="assets/img/estadio-montaje.jpg" alt="" loading="lazy"></figure>
+            <figure class="pass__img"><img src="assets/img/estadio-campo.jpg" alt="" loading="lazy"></figure>
             <h3>Producción</h3>
             <p class="pass__quote">“Del plano al último cierre de puertas.”</p>
             <ul class="pass__list">
@@ -236,8 +239,6 @@
         </div>
         <div class="rail" tabindex="0" aria-label="Galería desde dentro, desliza horizontalmente">
           <figure class="rail__item rail__item--tall"><video muted loop playsinline preload="none" poster="assets/img/v-estadio-poster.jpg" data-lazy-video aria-label="Vídeo de un estadio lleno durante un concierto"><source src="assets/video/v-estadio.mp4" type="video/mp4"></video><figcaption>Estadio lleno</figcaption></figure>
-          <figure class="rail__item"><img src="assets/img/estadio-montaje.jpg" alt="Estadio con el escenario montado y sillas en el césped" loading="lazy"><figcaption>Horas antes de abrir puertas</figcaption></figure>
-          <figure class="rail__item rail__item--tall"><img src="assets/img/equipo-walkie.jpg" alt="Dos miembros del equipo con walkie en un espacio de marca" loading="lazy"><figcaption>Equipo en operación</figcaption></figure>
           <figure class="rail__item rail__item--tall"><video muted loop playsinline preload="none" poster="assets/img/v-cabina-poster.jpg" data-lazy-video aria-label="Vídeo de un DJ en cabina entre humo"><source src="assets/video/v-cabina.mp4" type="video/mp4"></video><figcaption>Desde la cabina</figcaption></figure>
           <figure class="rail__item rail__item--tall"><img src="assets/img/espacio-marca.jpg" alt="Equipo dentro de un espacio de marca de colores" loading="lazy"><figcaption>Espacio de marca</figcaption></figure>
           <figure class="rail__item"><img src="assets/img/escenario-azul.jpg" alt="Escenario iluminado en azul frente al público" loading="lazy"><figcaption>Show day</figcaption></figure>
@@ -294,7 +295,7 @@
 
     <!-- TEAM: Alba -->
     <section class="founder section" id="equipo" data-section>
-      <figure class="founder__bg parallax" data-speed="0.1"><img src="assets/img/estadio-campo.jpg" alt="" loading="lazy"></figure>
+      <figure class="founder__bg parallax" data-speed="0.1"><img src="assets/img/escenario-azul.jpg" alt="" loading="lazy"></figure>
       <div class="container founder__inner">
         <p class="label label--light reveal">05 — Equipo</p>
         <blockquote class="founder__quote reveal">“La música no llegó a mi vida, <em>yo llegué a la suya.</em>”</blockquote>
@@ -373,6 +374,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=3"></script>
+  <script src="main.js?v=4"></script>
 </body>
 </html>

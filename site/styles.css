@@ -141,17 +141,26 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; text-trans
 .creds__venues { margin: 0 auto; padding-bottom: 22px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: rgba(227,226,222,.75); }
 .creds__venues b { font-weight: 600; color: var(--bone); }
 
-/* About */
-.manifesto { font: 900 clamp(52px, 8.4vw, 136px)/.9 var(--display); text-transform: uppercase; margin: 0; max-width: 1200px; letter-spacing: -.005em; }
-.manifesto em { color: var(--blue-hi); font-size: .9em; }
-.about__line { margin: 40px 0 0; max-width: 620px; margin-left: auto; font-size: clamp(19px, 1.7vw, 24px); line-height: 1.45; color: rgba(227,226,222,.85); }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: clamp(64px, 9vw, 112px) 0 0; border-top: 1px solid var(--line); }
-.stat { padding: 32px 24px 0 0; border-right: 1px solid var(--line); display: flex; flex-direction: column-reverse; justify-content: flex-end; }
+/* About: full-bleed photo behind the manifesto */
+.about { position: relative; padding-bottom: clamp(96px, 13vw, 168px); }
+.about__stage { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; }
+.about__bg { position: absolute; inset: 0; margin: 0; }
+.about__bg img { width: 100%; height: 118%; object-fit: cover; object-position: 50% 45%; filter: saturate(.9) brightness(.78); will-change: transform; }
+.about__bg::after { content: ""; position: absolute; inset: 0; background:
+  linear-gradient(180deg, var(--ink) 0%, rgba(11,11,15,.2) 18%, rgba(11,11,15,0) 40%, rgba(11,11,15,.55) 68%, var(--ink) 100%),
+  linear-gradient(90deg, rgba(11,11,15,.55) 0%, rgba(11,11,15,0) 60%); }
+.about__bg figcaption { left: auto; right: var(--gutter); bottom: auto; top: 96px; }
+.about__inner { position: relative; z-index: 2; padding-top: clamp(140px, 18vw, 220px); padding-bottom: 8px; }
+.manifesto { font: 900 clamp(52px, 8.4vw, 136px)/.9 var(--display); text-transform: uppercase; margin: 0; max-width: 1200px; letter-spacing: -.005em; text-shadow: 0 2px 40px rgba(11,11,15,.35); }
+.manifesto em { color: var(--bone); font-size: .9em; }
+.about__line { margin: 32px 0 0; max-width: 560px; font-size: clamp(19px, 1.7vw, 24px); line-height: 1.45; color: rgba(227,226,222,.9); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: clamp(56px, 8vw, 104px) 0 0; border-top: 1px solid rgba(227,226,222,.3); }
+.stat { padding: 28px 24px 0 0; border-right: 1px solid rgba(227,226,222,.2); display: flex; flex-direction: column-reverse; justify-content: flex-end; }
 .stat + .stat { padding-left: 28px; }
 .stat:last-child { border-right: 0; }
 .stat dd { margin: 0; font: 900 clamp(60px, 7.5vw, 120px)/1 var(--display); color: var(--bone); }
 .stat dd span { color: var(--blue-hi); }
-.stat dt { margin: 10px 0 0; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--muted); }
+.stat dt { margin: 10px 0 0; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: rgba(227,226,222,.7); }
 .about__strip { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 16px; margin-top: clamp(64px, 9vw, 112px); padding: 0 var(--gutter); }
 .about__strip figure { margin: 0; overflow: hidden; border-radius: 4px; aspect-ratio: 3/4; position: relative; }
 .about__strip figure:nth-child(2) { margin-top: 80px; }
@@ -318,8 +327,8 @@ figcaption { position: absolute; left: 12px; bottom: 12px; z-index: 2; font: 600
   .nav__logo { z-index: 2; }
   .contact__grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
-  .stat, .stat + .stat { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--line); }
-  .stat:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--line); }
+  .stat, .stat + .stat { padding: 22px 0; border-right: 0; border-bottom: 1px solid rgba(227,226,222,.2); }
+  .stat:nth-child(even) { padding-left: 20px; border-left: 1px solid rgba(227,226,222,.2); }
   .about__strip { grid-template-columns: 1fr 1fr; }
   .about__strip figure:nth-child(3) { display: none; }
   .about__strip figure:nth-child(2) { margin-top: 48px; }
