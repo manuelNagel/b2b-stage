@@ -6,9 +6,6 @@
   // Nav: solid on scroll + mobile menu
   const nav = $('#nav');
   const burger = $('.nav__burger');
-  const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 40);
-  addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
   burger.addEventListener('click', () => {
     const open = nav.classList.toggle('is-open');
     burger.setAttribute('aria-expanded', open);
@@ -20,6 +17,28 @@
     document.body.style.overflow = '';
   }));
 
+  // Scroll progress bar + section index
+  const bar = $('.progress span');
+  const sideLinks = $$('.sidenav a');
+  const count = $('.sidenav__count b');
+  const sections = sideLinks.map(a => a.getAttribute('href') === '#top' ? $('.hero') : $(a.getAttribute('href')));
+  const onScroll = () => {
+    nav.classList.toggle('is-scrolled', scrollY > 40);
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? Math.min(scrollY / max, 1) : 0})`;
+    let current = 0;
+    sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top <= innerHeight * .4) current = i; });
+    sideLinks.forEach((a, i) => {
+      a.classList.toggle('is-active', i === current);
+      a.classList.toggle('is-past', i < current);
+    });
+    if (count) count.textContent = String(current + 1).padStart(2, '0');
+  };
+  let ticking = false;
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { onScroll(); ticking = false; }); } }, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
+
   // Reveal on scroll, staggered per batch
   const io = new IntersectionObserver(entries => {
     entries.filter(e => e.isIntersecting).forEach((e, i) => {
@@ -30,28 +49,10 @@
   }, { rootMargin: '0px 0px -10% 0px' });
   $$('.reveal').forEach(el => io.observe(el));
 
-  // Counters
-  const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  const cio = new IntersectionObserver(entries => {
-    entries.filter(e => e.isIntersecting).forEach(e => {
-      const el = e.target, end = +el.dataset.count;
-      cio.unobserve(el);
-      if (reduce) { el.textContent = fmt(end); return; }
-      const t0 = performance.now(), dur = 1800;
-      const tick = t => {
-        const p = Math.min((t - t0) / dur, 1);
-        el.textContent = fmt(Math.round(end * (1 - Math.pow(1 - p, 4))));
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-  }, { threshold: .6 });
-  $$('[data-count]').forEach(el => cio.observe(el));
-
   // Parallax
   const para = $$('.parallax');
   if (!reduce && para.length) {
-    let ticking = false;
+    let pTicking = false;
     const update = () => {
       para.forEach(fig => {
         const r = fig.getBoundingClientRect();
@@ -59,33 +60,25 @@
         const offset = (r.top + r.height / 2 - innerHeight / 2) * +fig.dataset.speed;
         fig.querySelector('img').style.transform = `translate3d(0, ${offset - r.height * .07}px, 0)`;
       });
-      ticking = false;
+      pTicking = false;
     };
-    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener('scroll', () => { if (!pTicking) { pTicking = true; requestAnimationFrame(update); } }, { passive: true });
     update();
   }
 
-  // Artist names: floating image preview that follows the cursor
-  const preview = $('.name-preview');
-  const pImg = preview && preview.querySelector('img');
-  if (preview && matchMedia('(hover: hover)').matches) {
-    let x = 0, y = 0, cx = 0, cy = 0, raf;
-    const loop = () => {
-      cx += (x - cx) * .15; cy += (y - cy) * .15;
-      preview.style.left = cx + 'px'; preview.style.top = cy + 'px';
-      raf = requestAnimationFrame(loop);
-    };
-    $$('.name').forEach(n => {
-      n.addEventListener('mouseenter', e => {
-        pImg.src = n.dataset.img;
-        x = cx = e.clientX; y = cy = e.clientY;
-        preview.classList.add('is-on');
-        cancelAnimationFrame(raf); loop();
-      });
-      n.addEventListener('mousemove', e => { x = e.clientX; y = e.clientY; });
-      n.addEventListener('mouseleave', () => { preview.classList.remove('is-on'); setTimeout(() => cancelAnimationFrame(raf), 400); });
+  // Vertical clips: only play while visible
+  const vio = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting && !reduce) {
+        if (v.preload === 'none') v.preload = 'auto';
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
     });
-  }
+  }, { threshold: .4 });
+  $$('[data-lazy-video]').forEach(v => vio.observe(v));
 
   // Drag-to-scroll rail
   const rail = $('.rail');
@@ -100,44 +93,31 @@
     addEventListener('pointerup', () => { down = false; rail.classList.remove('is-drag'); });
   }
 
-  // Reel modal
-  const reel = $('#reel');
-  const reelVideo = reel.querySelector('video');
-  $$('[data-open-reel]').forEach(b => b.addEventListener('click', () => {
-    reel.showModal();
-    reelVideo.play().catch(() => {});
-  }));
-  const closeReel = () => { reelVideo.pause(); reel.close(); };
-  $('.reel__close').addEventListener('click', closeReel);
-  reel.addEventListener('click', e => { if (e.target === reel) closeReel(); });
-  reel.addEventListener('close', () => reelVideo.pause());
-
   // Contact form: validates and opens the user's mail client (static site, no backend)
   const form = $('#contact-form');
   const note = $('.form__note', form);
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const required = $$('[required]', form);
     let ok = true;
-    required.forEach(i => {
-      const bad = !i.value.trim() || (i.type === 'email' && !/^\S+@\S+\.\S+$/.test(i.value));
-      i.classList.toggle('is-invalid', bad);
+    $$('[required]', form).forEach(i => {
+      const bad = i.type === 'checkbox' ? !i.checked
+        : !i.value.trim() || (i.type === 'email' && !/^\S+@\S+\.\S+$/.test(i.value));
+      (i.type === 'checkbox' ? i.closest('label') : i).classList.toggle('is-invalid', bad);
       if (bad) ok = false;
     });
-    if (!ok) { note.textContent = 'Revisa nombre y email, por favor.'; return; }
+    if (!ok) { note.textContent = 'Revisa nombre, email y la casilla de privacidad, por favor.'; return; }
     const d = Object.fromEntries(new FormData(form));
-    const subject = `Solicitud de información · ${d.tipo} · ${d.nombre} ${d.apellido}`.trim();
+    const subject = `Contacto web · ${d.nombre}${d.empresa ? ' · ' + d.empresa : ''}`;
     const body = [
-      `Nombre: ${d.nombre} ${d.apellido}`,
+      `Nombre: ${d.nombre}`,
       `Email: ${d.email}`,
-      `Teléfono: ${d.telefono || '-'}`,
-      `Tipo de evento: ${d.tipo}`,
-      `Fecha aproximada: ${d.fecha || '-'}`,
+      `Empresa: ${d.empresa || '-'}`,
+      `Rol: ${d.rol || '-'}`,
       '',
       d.mensaje || ''
     ].join('\n');
     location.href = `mailto:info@back2backstage.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'Gracias. Abrimos tu correo con la solicitud lista para enviar.';
+    note.textContent = 'Gracias. Abrimos tu correo con el mensaje listo para enviar.';
   });
 
   $('#year').textContent = new Date().getFullYear();

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Back2backstage · Producción, hospitality y experiencias en vivo</title>
-  <meta name="description" content="Back2backstage convierte producción en experiencia: artist hospitality, transporte VIP, sponsors y guest lists para conciertos, festivales y giras. Hemos trabajado con artistas como Rels B y Shakira.">
-  <meta property="og:title" content="Back2backstage · La energía detrás del directo">
-  <meta property="og:description" content="Artist hospitality, transporte VIP, sponsors y guest lists para conciertos, festivales y giras.">
-  <meta property="og:image" content="assets/img/relsb-fuego.jpg">
+  <title>B2B Stage · Hospitality, logística y producción para artistas</title>
+  <meta name="description" content="B2B Stage: hospitality, logística y producción del lado del artista para conciertos, giras, festivales y espacios de marca. Desde Mallorca, en toda España.">
+  <meta property="og:title" content="B2B Stage · Todo lo que el público no ve, hecho impecable">
+  <meta property="og:description" content="Hospitality, logística y producción del lado del artista. Desde Mallorca, en toda España.">
+  <meta property="og:image" content="assets/img/estadio-montaje.jpg">
   <meta name="theme-color" content="#0b0b0f">
   <!-- Preview en GitHub Pages: quitar noindex al publicar en el dominio real -->
   <meta name="robots" content="noindex">
@@ -15,259 +15,321 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "B2B Stage",
+    "description": "Hospitality, logística y producción del lado del artista para conciertos, giras, festivales y espacios de marca.",
+    "email": "info@back2backstage.com",
+    "telephone": "+34 611 469 530",
+    "areaServed": "ES",
+    "address": { "@type": "PostalAddress", "addressRegion": "Illes Balears", "addressCountry": "ES" },
+    "employee": { "@type": "Person", "name": "Alba García" }
+  }
+  </script>
 </head>
 <body>
 
   <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__logo" aria-label="Back2backstage, inicio">
+    <a href="#top" class="nav__logo" aria-label="B2B Stage, inicio">
       <img src="assets/img/logo-b2b.png" alt="" width="34" height="61">
-      <span>Back2backstage</span>
+      <span>B2B Stage</span>
     </a>
     <nav class="nav__links" aria-label="Principal">
-      <a href="#nosotros">Nosotros</a>
+      <a href="#quienes">Quiénes somos</a>
       <a href="#servicios">Servicios</a>
-      <a href="#artistas">Artistas</a>
+      <a href="#trayectoria">Trayectoria</a>
       <a href="#metodo">Método</a>
-      <a href="#contacto" class="btn btn--small">Hablemos</a>
+      <a href="#contacto" class="btn btn--small">Contacto</a>
     </nav>
     <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
   </header>
 
+  <!-- Section index: shows where you are and how much is left -->
+  <nav class="sidenav" aria-label="Secciones">
+    <ol>
+      <li><a href="#top"><span>Inicio</span></a></li>
+      <li><a href="#quienes"><span>Quiénes somos</span></a></li>
+      <li><a href="#servicios"><span>Servicios</span></a></li>
+      <li><a href="#trayectoria"><span>Trayectoria</span></a></li>
+      <li><a href="#metodo"><span>Método</span></a></li>
+      <li><a href="#equipo"><span>Equipo y valores</span></a></li>
+      <li><a href="#contacto"><span>Contacto</span></a></li>
+    </ol>
+    <p class="sidenav__count"><b>01</b> / 07</p>
+  </nav>
+
   <main id="top">
 
     <!-- HERO -->
-    <section class="hero">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
-        <source src="assets/video/hero.mp4" type="video/mp4">
+    <section class="hero" data-section>
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-palma-poster.jpg" aria-hidden="true">
+        <source src="assets/video/hero-palma.mp4" type="video/mp4">
       </video>
       <div class="hero__shade"></div>
 
       <div class="hero__content">
-        <p class="eyebrow intro"><span class="dot"></span> Producción · Hospitality · Experiencias en vivo</p>
+        <p class="eyebrow intro">Hospitality · Logística · Producción</p>
         <h1 class="hero__title">
-          <span class="line"><span>Convertimos</span></span>
-          <span class="line"><span>producción en</span></span>
-          <span class="line"><span><em>experiencia.</em></span></span>
+          <span class="line"><span>Todo lo que</span></span>
+          <span class="line"><span>el público no ve,</span></span>
+          <span class="line"><span><em>hecho impecable.</em></span></span>
         </h1>
         <div class="hero__foot intro intro--late">
-          <p>El punto de encuentro entre talento, arte y pasión. Vivimos cada evento desde dentro: diseñamos, producimos y acompañamos cada detalle.</p>
+          <p>Hospitality, logística y producción del lado del artista para conciertos, giras, festivales y espacios de marca. Desde Mallorca, en toda España.</p>
           <div class="hero__ctas">
-            <a href="#contacto" class="btn">Solicita información <span aria-hidden="true">→</span></a>
-            <button class="btn btn--ghost" data-open-reel><span class="play" aria-hidden="true"></span> Ver reel</button>
+            <a href="#quienes" class="btn">Conócenos <span aria-hidden="true">→</span></a>
+            <a href="#trayectoria" class="btn btn--ghost">Ver trayectoria</a>
           </div>
         </div>
       </div>
 
-      <div class="hero__caption">En pantalla: Rels B en directo</div>
-      <a href="#nosotros" class="hero__scroll" aria-label="Bajar"><span></span></a>
+      <div class="hero__caption">Palma, noche de concierto</div>
     </section>
 
-    <!-- MARQUEE -->
-    <div class="marquee" aria-label="Artistas y formatos">
-      <div class="marquee__track">
-        <span>Rels B</span><i>✶</i><span>Shakira</span><i>✶</i><span>Festivales</span><i>✶</i><span>Giras internacionales</span><i>✶</i><span>Estadios</span><i>✶</i><span>Eventos corporativos</span><i>✶</i>
-        <span>Rels B</span><i>✶</i><span>Shakira</span><i>✶</i><span>Festivales</span><i>✶</i><span>Giras internacionales</span><i>✶</i><span>Estadios</span><i>✶</i><span>Eventos corporativos</span><i>✶</i>
+    <!-- CREDENTIALS -->
+    <div class="creds" aria-label="Artistas y venues">
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Alejandro Sanz</span><i>✶</i><span>Joaquín Sabina</span><i>✶</i><span>Tom Jones</span><i>✶</i><span>Simple Minds</span><i>✶</i><span>James Blunt</span><i>✶</i><span>Il Volo</span><i>✶</i><span>Manuel Carrasco</span><i>✶</i><span>Rels B</span><i>✶</i><span>Alan Parsons</span><i>✶</i><span>Sergio Dalma</span><i>✶</i><span>Ricky Martin</span><i>✶</i><span>Hombres G</span><i>✶</i><span>Diego Torres</span><i>✶</i><span>Pablo López</span><i>✶</i><span>Niña Pastori</span><i>✶</i><span>Valeria Castro</span><i>✶</i><span>Kakkmaddafakka</span><i>✶</i><span>Rudimental</span><i>✶</i><span>John Newman</span><i>✶</i>
+          <span aria-hidden="true">Alejandro Sanz</span><i>✶</i><span aria-hidden="true">Joaquín Sabina</span><i>✶</i><span aria-hidden="true">Tom Jones</span><i>✶</i><span aria-hidden="true">Simple Minds</span><i>✶</i><span aria-hidden="true">James Blunt</span><i>✶</i><span aria-hidden="true">Il Volo</span><i>✶</i><span aria-hidden="true">Manuel Carrasco</span><i>✶</i><span aria-hidden="true">Rels B</span><i>✶</i><span aria-hidden="true">Alan Parsons</span><i>✶</i><span aria-hidden="true">Sergio Dalma</span><i>✶</i><span aria-hidden="true">Ricky Martin</span><i>✶</i><span aria-hidden="true">Hombres G</span><i>✶</i><span aria-hidden="true">Diego Torres</span><i>✶</i><span aria-hidden="true">Pablo López</span><i>✶</i><span aria-hidden="true">Niña Pastori</span><i>✶</i><span aria-hidden="true">Valeria Castro</span><i>✶</i><span aria-hidden="true">Kakkmaddafakka</span><i>✶</i><span aria-hidden="true">Rudimental</span><i>✶</i><span aria-hidden="true">John Newman</span><i>✶</i>
+        </div>
       </div>
+      <p class="creds__venues container">En <b>Estadi Mallorca Son Moix</b> · <b>Velòdrom Illes Balears</b> · <b>Trui Son Fusteret</b> · <b>Sala Mutante</b> · <b>Luz de Gas</b> · <b>Salamandra</b></p>
     </div>
 
-    <!-- ABOUT -->
-    <section class="about section" id="nosotros">
-      <div class="container about__grid">
-        <div class="about__head">
-          <p class="label reveal">01 — Nosotros</p>
-          <h2 class="h2 reveal">La energía <br><em>detrás</em> del directo.</h2>
-        </div>
-        <div class="about__body">
-          <p class="lead reveal">Back2backstage nace de la experiencia directa en la industria del entretenimiento en vivo. Conocemos cada detalle del backstage porque lo hemos vivido desde dentro: desde festivales multitudinarios hasta giras internacionales.</p>
-          <p class="reveal">Nuestra misión es garantizar que cada artista, cada sponsor y cada invitado vivan una experiencia impecable detrás del escenario. Somos el equipo que trabaja en la sombra para que la magia ocurra en el escenario.</p>
-          <p class="reveal">Con años de experiencia coordinando hospitality, logística y accesos en los eventos más exigentes, somos el aliado de confianza de productoras, managers y marcas que no dejan nada al azar.</p>
-        </div>
-      </div>
+    <!-- WHO WE ARE -->
+    <section class="about section" id="quienes" data-section>
+      <div class="container">
+        <p class="label reveal">01 — Quiénes somos</p>
+        <h2 class="manifesto reveal">Nadie aplaude un transfer puntual. <em>Por eso existimos.</em></h2>
+        <p class="about__line reveal">Somos el equipo que trabaja donde no llegan los focos: del primer rider al último cierre de puertas.</p>
 
-      <div class="container stats">
-        <div class="stat reveal"><b data-count="500">0</b><span>+</span><p>Eventos gestionados</p></div>
-        <div class="stat reveal"><b data-count="2000">0</b><span>+</span><p>Artistas atendidos</p></div>
-        <div class="stat reveal"><b data-count="12">0</b><span>+</span><p>Años de experiencia</p></div>
+        <dl class="stats">
+          <div class="stat reveal"><dt>Artistas atendidos</dt><dd>20<span>+</span></dd></div>
+          <div class="stat reveal"><dt>Venues</dt><dd>6</dd></div>
+          <div class="stat reveal"><dt>Ciudades de gira</dt><dd>9</dd></div>
+          <div class="stat reveal"><dt>Continentes</dt><dd>2</dd></div>
+        </dl>
       </div>
 
       <div class="about__strip">
-        <figure class="parallax" data-speed="0.12"><img src="assets/img/backstage-crew.jpg" alt="Equipo celebrando en el backstage" loading="lazy"></figure>
-        <figure class="parallax" data-speed="-0.08"><img src="assets/img/relsb-humo.jpg" alt="Rels B en el escenario entre humo violeta" loading="lazy"></figure>
-        <figure class="parallax" data-speed="0.18"><img src="assets/img/publico-emocion.jpg" alt="Público emocionado durante un concierto" loading="lazy"></figure>
+        <figure class="parallax" data-speed="0.12"><img src="assets/img/camerino.jpg" alt="Camerino preparado con sofás, catering y burro de vestuario" loading="lazy"><figcaption>Camerino, antes de la llegada</figcaption></figure>
+        <figure class="parallax" data-speed="-0.08"><img src="assets/img/estadio-campo.jpg" alt="Miembro del equipo caminando por el césped hacia el escenario de un estadio en montaje" loading="lazy"><figcaption>Día de montaje</figcaption></figure>
+        <figure class="parallax" data-speed="0.18"><img src="assets/img/equipo-pase.jpg" alt="Miembro del equipo con acreditación junto a la valla del público" loading="lazy"><figcaption>Show day</figcaption></figure>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="services section" id="servicios">
-      <div class="container">
-        <div class="section__head">
-          <p class="label reveal">02 — Servicios</p>
-          <h2 class="h2 reveal">Tres pilares. <br><em>Una experiencia perfecta.</em></h2>
-        </div>
-
-        <div class="svc-list">
-          <article class="svc reveal">
-            <div class="svc__num">01</div>
-            <div class="svc__main">
-              <h3>Artist Hospitality</h3>
-              <p>Gestión integral de camerinos: riders técnicos y de catering, ambientación premium y atención personalizada a artistas y su equipo. Cada detalle, cuidado al milímetro.</p>
-              <ul class="tags"><li>Riders</li><li>Catering</li><li>Camerinos premium</li><li>Atención 1:1</li></ul>
-            </div>
-            <figure class="svc__img"><img src="assets/img/relsb-sonrisa.jpg" alt="" loading="lazy"></figure>
-          </article>
-
-          <article class="svc reveal">
-            <div class="svc__num">02</div>
-            <div class="svc__main">
-              <h3>Transporte VIP</h3>
-              <p>Logística de traslados para artistas, bandas e invitados VIP. Flota premium, conductores profesionales y coordinación en tiempo real durante todo el evento.</p>
-              <ul class="tags"><li>Flota premium</li><li>Chóferes profesionales</li><li>Coordinación en tiempo real</li></ul>
-            </div>
-            <figure class="svc__img"><img src="assets/img/palma-noche.jpg" alt="" loading="lazy"></figure>
-          </article>
-
-          <article class="svc reveal">
-            <div class="svc__num">03</div>
-            <div class="svc__main">
-              <h3>Sponsors &amp; Guest Lists</h3>
-              <p>Gestión de listas de invitados, acreditaciones y coordinación con sponsors. Control de accesos, experiencias VIP y reporting en tiempo real.</p>
-              <ul class="tags"><li>Acreditaciones</li><li>Control de accesos</li><li>Experiencias VIP</li><li>Reporting</li></ul>
-            </div>
-            <figure class="svc__img"><img src="assets/img/festival-arcos.jpg" alt="" loading="lazy"></figure>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ARTISTS / WORK -->
-    <section class="work section" id="artistas">
+    <!-- SERVICES: one AAA pass -->
+    <section class="services section" id="servicios" data-section>
       <div class="container">
         <div class="section__head section__head--row">
           <div>
-            <p class="label reveal">03 — Artistas</p>
-            <h2 class="h2 reveal">Hemos estado <em>detrás</em> de</h2>
+            <p class="label reveal">02 — Servicios</p>
+            <h2 class="h2 reveal">Un solo pase. <br><em>Todas las puertas.</em></h2>
           </div>
-          <p class="section__aside reveal">Trabajamos con artistas de primer nivel, en estadios, festivales y giras. La discreción es parte del servicio: aquí, solo lo que podemos contar.</p>
+          <p class="section__aside reveal">Tu equipo produce el show; nosotros, todo lo que rodea al artista. Un interlocutor, tres áreas.</p>
         </div>
 
-        <ul class="names">
-          <li class="name reveal" data-img="assets/img/relsb-fuego.jpg">
-            <span class="name__title">Rels B</span>
-            <span class="name__meta">Conciertos · Hospitality · Logística</span>
-          </li>
-          <li class="name reveal" data-img="assets/img/estadio.jpg">
-            <span class="name__title">Shakira</span>
-            <span class="name__meta">Conciertos y eventos</span>
-          </li>
-          <li class="name name--muted reveal" data-img="assets/img/festival-aereo.jpg">
-            <span class="name__title">Festivales</span>
-            <span class="name__meta">Recintos multitudinarios · Acreditaciones · Sponsors</span>
-          </li>
-        </ul>
-        <div class="name-preview" aria-hidden="true"><img alt=""></div>
-      </div>
+        <div class="passes">
+          <article class="pass reveal">
+            <header class="pass__top"><span>AAA</span><span>01</span></header>
+            <figure class="pass__img"><img src="assets/img/camerino.jpg" alt="" loading="lazy"></figure>
+            <h3>Hospitality</h3>
+            <p class="pass__quote">“Que el artista se sienta en casa.”</p>
+            <ul class="pass__list">
+              <li>Camerinos según rider</li>
+              <li>Catering de artista y equipo</li>
+              <li>Backstage bar y zonas VIP</li>
+              <li>Guest lists y acreditaciones</li>
+              <li>Meet &amp; greet y sponsors</li>
+            </ul>
+          </article>
 
-      <!-- Rels B case gallery -->
-      <div class="case">
-        <div class="container case__head">
-          <p class="label reveal">En foco</p>
-          <h3 class="case__title reveal">Rels B, <em>desde dentro</em></h3>
-          <button class="btn btn--ghost reveal" data-open-reel><span class="play" aria-hidden="true"></span> Ver el reel completo</button>
+          <article class="pass reveal">
+            <header class="pass__top"><span>AAA</span><span>02</span></header>
+            <figure class="pass__img"><img src="assets/img/palma-noche.jpg" alt="" loading="lazy"></figure>
+            <h3>Logística</h3>
+            <p class="pass__quote">“Cada trayecto, en nuestras manos.”</p>
+            <ul class="pass__list">
+              <li>Vuelos nacionales e internacionales</li>
+              <li>Hoteles según rider</li>
+              <li>Transfers con flota de alta gama</li>
+              <li>Advancing con el tour manager</li>
+              <li>Tour support y disponibilidad 24 h</li>
+            </ul>
+          </article>
+
+          <article class="pass reveal">
+            <header class="pass__top"><span>AAA</span><span>03</span></header>
+            <figure class="pass__img"><img src="assets/img/estadio-montaje.jpg" alt="" loading="lazy"></figure>
+            <h3>Producción</h3>
+            <p class="pass__quote">“Del plano al último cierre de puertas.”</p>
+            <ul class="pass__list">
+              <li>Planificación y hojas de ruta</li>
+              <li>Montaje, pruebas, show y desmontaje</li>
+              <li>Equipos y proveedores</li>
+              <li>Gran formato en estadio</li>
+              <li>Espacios de marca</li>
+            </ul>
+          </article>
         </div>
-        <div class="rail" tabindex="0" aria-label="Galería Rels B, desliza horizontalmente">
-          <figure class="rail__item rail__item--tall"><img src="assets/img/relsb-rojo.jpg" alt="Rels B bajo un foco rojo" loading="lazy"></figure>
-          <figure class="rail__item"><img src="assets/img/relsb-bandera.jpg" alt="Rels B con una bandera en el escenario" loading="lazy"></figure>
-          <figure class="rail__item rail__item--tall"><img src="assets/img/relsb-foco.jpg" alt="Rels B bajo un foco blanco" loading="lazy"></figure>
-          <figure class="rail__item"><img src="assets/img/relsb-bn.jpg" alt="Rels B en blanco y negro" loading="lazy"></figure>
-          <figure class="rail__item rail__item--tall"><img src="assets/img/relsb-salto.jpg" alt="Rels B saltando en el escenario" loading="lazy"></figure>
-          <figure class="rail__item"><img src="assets/img/relsb-escenario-bn.jpg" alt="Rels B en el escenario con humo" loading="lazy"></figure>
-          <figure class="rail__item rail__item--tall"><img src="assets/img/relsb-brazos.jpg" alt="Rels B con los brazos abiertos" loading="lazy"></figure>
-          <figure class="rail__item"><img src="assets/img/publico-bn.jpg" alt="Público en blanco y negro" loading="lazy"></figure>
-          <figure class="rail__item rail__item--tall"><img src="assets/img/relsb-agachado.jpg" alt="Rels B agachado con una bandera" loading="lazy"></figure>
-          <figure class="rail__item"><img src="assets/img/relsb-microfono.jpg" alt="Rels B con el micrófono" loading="lazy"></figure>
-        </div>
-        <div class="container rail__hint">Arrastra para ver más <span aria-hidden="true">⟶</span></div>
       </div>
     </section>
 
-    <!-- WHY -->
-    <section class="why section" id="por-que">
+    <!-- TRACK RECORD -->
+    <section class="work section" id="trayectoria" data-section>
       <div class="container">
-        <div class="section__head">
-          <p class="label label--light reveal">04 — ¿Por qué elegirnos?</p>
-          <h2 class="h2 reveal">La diferencia está <br><em>en los detalles.</em></h2>
+        <div class="section__head section__head--row">
+          <div>
+            <p class="label reveal">03 — Trayectoria</p>
+            <h2 class="h2 reveal">Hecho, <em>no prometido.</em></h2>
+          </div>
+          <p class="section__aside reveal">Una selección de proyectos recientes, con lo que hicimos en cada uno.</p>
         </div>
-        <div class="why__grid">
-          <div class="why__item reveal"><span>A</span><h3>Profesionalismo extremo</h3><p>Protocolos probados en los eventos más exigentes de la industria. Nada queda al azar.</p></div>
-          <div class="why__item reveal"><span>B</span><h3>Experiencia en vivo</h3><p>No somos una agencia más. Venimos de la industria musical y entendemos sus ritmos y presiones.</p></div>
-          <div class="why__item reveal"><span>C</span><h3>Discreción absoluta</h3><p>Trabajamos con artistas de primer nivel. La confidencialidad y el respeto son nuestra marca.</p></div>
-          <div class="why__item reveal"><span>D</span><h3>Soluciones a medida</h3><p>Cada evento es único. Diseñamos planes personalizados que se adaptan a cualquier escala y formato.</p></div>
+
+        <ol class="cases">
+          <li class="case-row reveal">
+            <span class="case-row__year">2025–26</span>
+            <div class="case-row__main"><h3>Temporada de estadio</h3><p>Producción de gran formato en el Estadi Mallorca Son Moix.</p></div>
+            <span class="case-row__tag">Producción</span>
+          </li>
+          <li class="case-row reveal">
+            <span class="case-row__year">2026</span>
+            <div class="case-row__main"><h3>Kakkmaddafakka · Gira española</h3><p>Tour support en 9 ciudades.</p></div>
+            <span class="case-row__tag">Logística</span>
+          </li>
+          <li class="case-row reveal">
+            <span class="case-row__year"></span>
+            <div class="case-row__main"><h3>Xenia Dia · Mongolia</h3><p>Tour support internacional.</p></div>
+            <span class="case-row__tag">Logística</span>
+          </li>
+          <li class="case-row reveal">
+            <span class="case-row__year">2026</span>
+            <div class="case-row__main"><h3>La Patrona</h3><p>Festival con Rudimental y John Newman.</p></div>
+            <span class="case-row__tag">Festival</span>
+          </li>
+          <li class="case-row reveal">
+            <span class="case-row__year"></span>
+            <div class="case-row__main"><h3>Pabellón Moda · ES LATINA</h3><p>Personal por zonas, mobiliario, proveedores, control de flujos e instalación Wolf Head.</p></div>
+            <span class="case-row__tag">Producción</span>
+          </li>
+          <li class="case-row reveal">
+            <span class="case-row__year">2024</span>
+            <div class="case-row__main"><h3>Palma Concert Series</h3><p>Ciclo de conciertos en Palma.</p></div>
+            <span class="case-row__tag">Conciertos</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Behind the scenes rail: photos + vertical clips -->
+      <div class="inside">
+        <div class="container inside__head">
+          <h3 class="inside__title reveal">Desde <em>dentro</em></h3>
+          <p class="rail__hint reveal">Arrastra o desliza <span aria-hidden="true">⟶</span></p>
+        </div>
+        <div class="rail" tabindex="0" aria-label="Galería desde dentro, desliza horizontalmente">
+          <figure class="rail__item rail__item--tall"><video muted loop playsinline preload="none" poster="assets/img/v-estadio-poster.jpg" data-lazy-video aria-label="Vídeo de un estadio lleno durante un concierto"><source src="assets/video/v-estadio.mp4" type="video/mp4"></video><figcaption>Estadio lleno</figcaption></figure>
+          <figure class="rail__item"><img src="assets/img/estadio-montaje.jpg" alt="Estadio con el escenario montado y sillas en el césped" loading="lazy"><figcaption>Horas antes de abrir puertas</figcaption></figure>
+          <figure class="rail__item rail__item--tall"><img src="assets/img/equipo-walkie.jpg" alt="Dos miembros del equipo con walkie en un espacio de marca" loading="lazy"><figcaption>Equipo en operación</figcaption></figure>
+          <figure class="rail__item rail__item--tall"><video muted loop playsinline preload="none" poster="assets/img/v-cabina-poster.jpg" data-lazy-video aria-label="Vídeo de un DJ en cabina entre humo"><source src="assets/video/v-cabina.mp4" type="video/mp4"></video><figcaption>Desde la cabina</figcaption></figure>
+          <figure class="rail__item rail__item--tall"><img src="assets/img/espacio-marca.jpg" alt="Equipo dentro de un espacio de marca de colores" loading="lazy"><figcaption>Espacio de marca</figcaption></figure>
+          <figure class="rail__item"><img src="assets/img/escenario-azul.jpg" alt="Escenario iluminado en azul frente al público" loading="lazy"><figcaption>Show day</figcaption></figure>
+          <figure class="rail__item rail__item--tall"><video muted loop playsinline preload="none" poster="assets/img/v-atardecer-poster.jpg" data-lazy-video aria-label="Vídeo de un recinto de festival al atardecer"><source src="assets/video/v-atardecer.mp4" type="video/mp4"></video><figcaption>Atardecer en recinto</figcaption></figure>
+          <figure class="rail__item"><img src="assets/img/relsb-fuego.jpg" alt="Rels B en el escenario entre llamaradas" loading="lazy"><figcaption>Rels B</figcaption></figure>
+          <figure class="rail__item rail__item--tall"><video muted loop playsinline preload="none" poster="assets/img/v-publico-poster.jpg" data-lazy-video aria-label="Vídeo del público frente al escenario"><source src="assets/video/v-publico.mp4" type="video/mp4"></video><figcaption>Público</figcaption></figure>
+          <figure class="rail__item"><img src="assets/img/festival-recinto.jpg" alt="Vista aérea de un recinto de festival de colores" loading="lazy"><figcaption>Recinto desde arriba</figcaption></figure>
+          <figure class="rail__item rail__item--tall"><img src="assets/img/backstage-crew.jpg" alt="Equipo celebrando en el backstage" loading="lazy"><figcaption>Al cerrar puertas</figcaption></figure>
+          <figure class="rail__item"><img src="assets/img/tipi-noche.jpg" alt="Tipi iluminado en rojo de noche en un recinto" loading="lazy"><figcaption>Recinto, de noche</figcaption></figure>
+          <figure class="rail__item"><img src="assets/img/publico-emocion.jpg" alt="Público emocionado durante un concierto" loading="lazy"><figcaption>Por esto lo hacemos</figcaption></figure>
         </div>
       </div>
     </section>
 
     <!-- METHOD -->
-    <section class="method section" id="metodo">
+    <section class="method section" id="metodo" data-section>
       <div class="container">
         <div class="section__head section__head--row">
           <div>
-            <p class="label reveal">05 — Método</p>
+            <p class="label reveal">04 — Método</p>
             <h2 class="h2 reveal">Del rider <em>al aplauso.</em></h2>
           </div>
           <p class="section__aside reveal">Un solo equipo acompaña al artista desde el primer email hasta que se apagan las luces.</p>
         </div>
         <ol class="steps">
-          <li class="step reveal"><b>01</b><h3>Briefing</h3><p>Leemos riders técnicos y de catering, necesidades del equipo y del sponsor. Definimos alcance y presupuesto.</p></li>
-          <li class="step reveal"><b>02</b><h3>Planificación</h3><p>Camerinos, traslados, listas y acreditaciones: un plan único, con responsables y horarios cerrados.</p></li>
-          <li class="step reveal"><b>03</b><h3>Show day</h3><p>Coordinación en tiempo real en recinto. Llegadas, accesos y camerinos, sin fricciones.</p></li>
-          <li class="step reveal"><b>04</b><h3>Cierre</h3><p>Reporting de accesos e invitados, feedback del artista y aprendizajes para la próxima fecha.</p></li>
+          <li class="step reveal">
+            <svg class="step__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="8" width="26" height="34" rx="3"/><path d="M19 8V5h10v3M17 18h14M17 25h14M17 32h8"/></svg>
+            <b>01</b><h3>Briefing</h3><p>Rider y necesidades de artista, promotor y sponsors.</p>
+          </li>
+          <li class="step reveal">
+            <svg class="step__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M18 28l5 5 9-11"/></svg>
+            <b>02</b><h3>Propuesta</h3><p>Alcance, equipo y presupuesto, por escrito.</p>
+          </li>
+          <li class="step reveal">
+            <svg class="step__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="30" rx="3"/><path d="M7 19h34M16 6v8M32 6v8M14 27h6M14 33h6M26 27h8M26 33h8"/></svg>
+            <b>03</b><h3>Preproducción</h3><p>Camerinos, viajes, proveedores y listas con horarios cerrados.</p>
+          </li>
+          <li class="step reveal">
+            <svg class="step__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="15" y="14" width="18" height="28" rx="3"/><path d="M20 14V5M20 22h8M20 27h8M21 35h6"/><path d="M36 12c2 2 3 4.5 3 7s-1 5-3 7M40 8c3 3 5 7 5 11s-2 8-5 11" opacity=".55"/></svg>
+            <b>04</b><h3>Show day</h3><p>Coordinación en recinto y con el tour manager, 24 h.</p>
+          </li>
+          <li class="step reveal">
+            <svg class="step__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32"/><rect x="11" y="26" width="6" height="14"/><rect x="21" y="18" width="6" height="22"/><rect x="31" y="10" width="6" height="30"/></svg>
+            <b>05</b><h3>Cierre</h3><p>Informe de accesos, incidencias y aprendizajes.</p>
+          </li>
         </ol>
+        <ul class="assurances reveal">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Disponibilidad 24 h</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h12M12 6l6 6-6 6"/><path d="M4 6v12" opacity=".55"/></svg>Plan B antes que el problema</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>NDA estándar y total confidencialidad</li>
+        </ul>
       </div>
     </section>
 
-    <!-- FOUNDER -->
-    <section class="founder section">
-      <figure class="founder__bg parallax" data-speed="0.1"><img src="assets/img/relsb-escenario-bn.jpg" alt="" loading="lazy"></figure>
+    <!-- TEAM: Alba -->
+    <section class="founder section" id="equipo" data-section>
+      <figure class="founder__bg parallax" data-speed="0.1"><img src="assets/img/estadio-campo.jpg" alt="" loading="lazy"></figure>
       <div class="container founder__inner">
-        <p class="label label--light reveal">Fundadora</p>
+        <p class="label label--light reveal">05 — Equipo</p>
         <blockquote class="founder__quote reveal">“La música no llegó a mi vida, <em>yo llegué a la suya.</em>”</blockquote>
         <div class="founder__text">
           <p class="reveal">Crecí entre escenarios y camerinos, en una familia donde el arte era el día a día. Desde pequeña entendí que la magia no solo ocurre en el escenario, sino también detrás de él.</p>
-          <p class="reveal">Hoy, en Back2Backstage, transformamos esa herencia en una forma de trabajar: hacer del hospitality un arte. Cuidamos cada detalle para que los artistas se sientan cómodos, comprendidos y en casa, allí donde el show empieza: en el backstage.</p>
-          <p class="founder__sign reveal">Alba García <span>Fundadora, Back2backstage</span></p>
+          <p class="reveal">Hoy, en B2B Stage, transformamos esa herencia en una forma de trabajar: cuidar cada detalle para que los artistas se sientan comprendidos y en casa, allí donde el show empieza.</p>
+          <p class="founder__sign reveal">Alba García <span>Responsable de B2B Stage</span></p>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="gallery section" aria-label="Galería">
+    <!-- VALUES -->
+    <section class="values section" aria-labelledby="valores-title">
       <div class="container">
         <div class="section__head">
-          <p class="label reveal">06 — Momentos</p>
-          <h2 class="h2 reveal">Lo que pasa <em>cuando todo sale bien.</em></h2>
+          <p class="label label--light reveal">Valores</p>
+          <h2 class="h2 reveal" id="valores-title">Cuando el artista está bien, <em>el show es mejor.</em></h2>
         </div>
-        <div class="mosaic">
-          <figure class="m m--wide reveal"><img src="assets/img/festival-recinto.jpg" alt="Vista aérea de un recinto de festival de colores" loading="lazy"></figure>
-          <figure class="m m--tall reveal"><img src="assets/img/festival-atardecer.jpg" alt="Atardecer sobre un festival" loading="lazy"></figure>
-          <figure class="m reveal"><img src="assets/img/publico-azul.jpg" alt="Público bajo luces azules" loading="lazy"></figure>
-          <figure class="m reveal"><img src="assets/img/atardecer-publico.jpg" alt="Público al atardecer frente al escenario" loading="lazy"></figure>
-          <figure class="m m--tall reveal"><img src="assets/img/festival-aereo.jpg" alt="Recinto de festival visto desde arriba" loading="lazy"></figure>
-          <figure class="m m--wide reveal"><img src="assets/img/relsb-bandera-escenario.jpg" alt="Artista con bandera en el escenario" loading="lazy"></figure>
-        </div>
+        <ul class="values__list">
+          <li class="reveal"><h3>Cuidado</h3><p>El rider se cumple, entero.</p></li>
+          <li class="reveal"><h3>Discreción</h3><p>Lo que pasa en el camerino se queda en el camerino.</p></li>
+          <li class="reveal"><h3>Anticipación</h3><p>El plan B existe antes que el problema.</p></li>
+          <li class="reveal"><h3>Oficio</h3><p>Venimos de la industria y hablamos su idioma.</p></li>
+          <li class="reveal"><h3>Respeto</h3><p>Por artistas, equipos y proveedores.</p></li>
+        </ul>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact section" id="contacto">
+    <section class="contact section" id="contacto" data-section>
       <div class="container contact__grid">
         <div class="contact__intro">
-          <p class="label label--light reveal">07 — Contacto</p>
-          <h2 class="h2 reveal">Hablemos de tu <em>próximo evento.</em></h2>
-          <p class="reveal">Rellena el formulario y nuestro equipo se pondrá en contacto contigo en menos de 24 horas.</p>
+          <p class="label label--light reveal">06 — Contacto</p>
+          <h2 class="h2 reveal">Hablemos de lo <em>que hay detrás.</em></h2>
+          <p class="reveal">Respondemos en menos de 24 horas.</p>
           <ul class="contact__direct reveal">
             <li><span>Email</span><a href="mailto:info@back2backstage.com">info@back2backstage.com</a></li>
             <li><span>Teléfono</span><a href="tel:+34611469530">+34 611 469 530</a></li>
@@ -276,24 +338,16 @@
 
         <form class="form reveal" id="contact-form" novalidate>
           <div class="form__row">
-            <label><span>Nombre</span><input name="nombre" required autocomplete="given-name"></label>
-            <label><span>Apellido</span><input name="apellido" autocomplete="family-name"></label>
+            <label><span>Nombre</span><input name="nombre" required autocomplete="name"></label>
+            <label><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
           </div>
           <div class="form__row">
-            <label><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
-            <label><span>Teléfono</span><input type="tel" name="telefono" autocomplete="tel"></label>
+            <label><span>Empresa</span><input name="empresa" autocomplete="organization"></label>
+            <label><span>Rol</span><input name="rol" placeholder="Promotor, tour manager, venue…" autocomplete="organization-title"></label>
           </div>
-          <fieldset class="chips">
-            <legend>Tipo de evento</legend>
-            <label><input type="radio" name="tipo" value="Concierto" checked><span>Concierto</span></label>
-            <label><input type="radio" name="tipo" value="Festival"><span>Festival</span></label>
-            <label><input type="radio" name="tipo" value="Gira"><span>Gira</span></label>
-            <label><input type="radio" name="tipo" value="Evento corporativo"><span>Evento corporativo</span></label>
-            <label><input type="radio" name="tipo" value="Otro"><span>Otro</span></label>
-          </fieldset>
-          <label><span>Fecha aproximada</span><input type="date" name="fecha"></label>
-          <label><span>Mensaje</span><textarea name="mensaje" rows="4" placeholder="Cuéntanos artista, recinto, aforo, servicios que necesitas…"></textarea></label>
-          <button class="btn btn--light" type="submit">Enviar solicitud <span aria-hidden="true">→</span></button>
+          <label><span>Mensaje</span><textarea name="mensaje" rows="4"></textarea></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Acepto que B2B Stage use estos datos solo para responder a mi mensaje.</span></label>
+          <button class="btn btn--light" type="submit">Enviar <span aria-hidden="true">→</span></button>
           <p class="form__note" role="status"></p>
         </form>
       </div>
@@ -302,28 +356,23 @@
 
   <footer class="footer">
     <div class="container footer__top">
-      <img src="assets/img/logo-mark.png" alt="Back2backstage" class="footer__mark">
+      <div class="footer__brand">
+        <img src="assets/img/logo-mark.png" alt="B2B Stage" class="footer__mark">
+        <p>Artist hospitality, logistics &amp; production.</p>
+      </div>
       <div class="footer__cols">
         <div><span>Contacto</span><a href="mailto:info@back2backstage.com">info@back2backstage.com</a><a href="tel:+34611469530">+34 611 469 530</a></div>
-        <div><span>Servicios</span><a href="#servicios">Artist Hospitality</a><a href="#servicios">Transporte VIP</a><a href="#servicios">Sponsors &amp; Guest Lists</a></div>
-        <div><span>Navegar</span><a href="#nosotros">Nosotros</a><a href="#artistas">Artistas</a><a href="#contacto">Contacto</a></div>
+        <div><span>Servicios</span><a href="#servicios">Hospitality</a><a href="#servicios">Logística</a><a href="#servicios">Producción</a></div>
+        <div><span>Compañía</span><a href="#quienes">Quiénes somos</a><a href="#trayectoria">Trayectoria</a><a href="#metodo">Método</a></div>
       </div>
     </div>
-    <div class="footer__word" aria-hidden="true">BACK2BACKSTAGE</div>
+    <div class="footer__word" aria-hidden="true">B2B STAGE</div>
     <div class="container footer__bottom">
-      <span>© <span id="year"></span> Back2backstage</span>
-      <span>Vivimos cada evento desde dentro.</span>
+      <span>© <span id="year"></span> B2B Stage</span>
+      <span>Todo lo que el público no ve.</span>
     </div>
   </footer>
 
-  <!-- Reel modal -->
-  <dialog class="reel" id="reel">
-    <button class="reel__close" aria-label="Cerrar">✕</button>
-    <video controls playsinline preload="none" poster="assets/img/hero-poster.jpg">
-      <source src="assets/video/reel-relsb.mp4" type="video/mp4">
-    </video>
-  </dialog>
-
-  <script src="main.js?v=2"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>
