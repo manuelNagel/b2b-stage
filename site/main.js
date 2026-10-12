@@ -94,6 +94,10 @@
   }
 
   // Contact form: validates and opens the user's mail client (static site, no backend)
+  const en = document.documentElement.lang === 'en';
+  const t = en
+    ? { invalid: 'Please check your name, email and the privacy box.', sent: 'Thanks. Your email app is opening with the message ready to send.', subject: 'Website contact', name: 'Name', company: 'Company', role: 'Role' }
+    : { invalid: 'Revisa nombre, email y la casilla de privacidad, por favor.', sent: 'Gracias. Abrimos tu correo con el mensaje listo para enviar.', subject: 'Contacto web', name: 'Nombre', company: 'Empresa', role: 'Rol' };
   const form = $('#contact-form');
   const note = $('.form__note', form);
   form.addEventListener('submit', e => {
@@ -105,19 +109,19 @@
       (i.type === 'checkbox' ? i.closest('label') : i).classList.toggle('is-invalid', bad);
       if (bad) ok = false;
     });
-    if (!ok) { note.textContent = 'Revisa nombre, email y la casilla de privacidad, por favor.'; return; }
+    if (!ok) { note.textContent = t.invalid; return; }
     const d = Object.fromEntries(new FormData(form));
-    const subject = `Contacto web · ${d.nombre}${d.empresa ? ' · ' + d.empresa : ''}`;
+    const subject = `${t.subject} · ${d.nombre}${d.empresa ? ' · ' + d.empresa : ''}`;
     const body = [
-      `Nombre: ${d.nombre}`,
+      `${t.name}: ${d.nombre}`,
       `Email: ${d.email}`,
-      `Empresa: ${d.empresa || '-'}`,
-      `Rol: ${d.rol || '-'}`,
+      `${t.company}: ${d.empresa || '-'}`,
+      `${t.role}: ${d.rol || '-'}`,
       '',
       d.mensaje || ''
     ].join('\n');
     location.href = `mailto:info@back2backstage.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'Gracias. Abrimos tu correo con el mensaje listo para enviar.';
+    note.textContent = t.sent;
   });
 
   $('#year').textContent = new Date().getFullYear();

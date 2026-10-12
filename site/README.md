@@ -8,6 +8,14 @@ Sitio estático (HTML + CSS + JS, sin build). Se publica en GitHub Pages con cad
 
 y abrir http://localhost:4321
 
+## Versión en inglés
+
+`site/en/index.html` se genera desde la página en español:
+
+    python3 tools/build_en.py
+
+Si cambias un texto en español, el script avisa de qué frase falta traducir en `tools/build_en.py`.
+
 ## Estructura
 
 - `index.html`: portada con vídeo, credenciales, quiénes somos y cifras, servicios (hospitality, logística y producción), trayectoria, galería "Desde dentro", método, equipo, valores y contacto.
@@ -21,7 +29,6 @@ y abrir http://localhost:4321
 - Confirmar las cifras (20+ artistas, 6 venues, 9 ciudades, 2 continentes).
 - Legales: aviso legal, privacidad y cookies, con la sociedad que presta el servicio. Nombre del holding para "Una compañía de […]".
 - Unificar el email (info@ en la web, alba@ en el dossier).
-- Versión en inglés.
 - Testimonios reales de tour managers y promotores.
 - Conectar el formulario a un servicio (Formspree, etc.); ahora abre el correo del visitante.
 - Dominio propio: quitar `noindex`, añadir canonical y sitemap.
