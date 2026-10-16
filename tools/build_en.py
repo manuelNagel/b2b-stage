@@ -181,10 +181,13 @@ PAIRS = [
     ('05 — Equipo', '05 — Team'),
     ('“La música no llegó a mi vida, <em>yo llegué a la suya.</em>”',
      '“Music didn’t come into my life, <em>I came into its.</em>”'),
-    ('Crecí entre escenarios y camerinos, en una familia donde el arte era el día a día. Desde pequeña entendí que la magia no solo ocurre en el escenario, sino también detrás de él.',
-     'I grew up between stages and dressing rooms, in a family where art was everyday life. From a young age I understood that the magic doesn’t only happen on stage, but behind it too.'),
-    ('Hoy, en B2B Stage, transformamos esa herencia en una forma de trabajar: cuidar cada detalle para que los artistas se sientan comprendidos y en casa, allí donde el show empieza.',
-     'Today, at B2B Stage, we’ve turned that heritage into a way of working: caring for every detail so artists feel understood and at home, right where the show begins.'),
+    ('Nací entre acordes, escenarios y camerinos, en una familia donde músicos, promotores y managers eran parte de casa. Desde pequeña aprendí que la magia no solo pasa sobre el escenario: también detrás, en cada gesto y en cada detalle.',
+     'I was born among chords, stages and dressing rooms, in a family where musicians, promoters and managers were part of home. I learned early on that the magic doesn’t only happen on stage: it happens behind it too, in every gesture and every detail.'),
+    ('Hoy produzco conciertos, giras y festivales, coordinando equipos, artistas y todo lo que hace posible que el show suceda. Para mí, la hospitalidad es crear un refugio en medio de la carretera: un lugar donde artistas y equipos se sientan como en casa.',
+     'Today I produce concerts, tours and festivals, coordinating crews, artists and everything that makes the show happen. To me, hospitality means building a refuge in the middle of the road: a place where artists and their teams feel at home.'),
+    ('La música es mi origen, la producción es mi camino y las personas son el corazón de todo lo que hago.',
+     'Music is where I come from, production is my path, and people are the heart of everything I do.'),
+    ('Alba García, <em>de la Terreta</em>', 'Alba García, <em>de la Terreta</em>'),
     ('<span>Responsable de B2B Stage</span>', '<span>Head of B2B Stage</span>'),
 
     # Values
